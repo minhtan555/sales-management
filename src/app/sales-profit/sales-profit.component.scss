@@ -1,0 +1,85 @@
+body {
+    max-width: 360px;
+    height: 580px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.container {
+    max-width: 360px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    header {
+        margin: 10px;
+        display: flex;
+        font-weight: bold;
+        div {
+            margin: 0 auto;
+        }
+    }
+    .profit-title {
+        margin-left: 15px;
+        font-weight: bold;
+    }
+    .profit-type {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        strong {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: center;
+        }
+        .pt-choose {
+            background-color: lightblue;
+        }
+    }
+    .profit-detail {
+        flex-grow: 2;
+        margin-top: 10px;
+        .pd-title {
+            background-color: gray;
+            opacity: 0.8;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 5px;
+            
+        }
+        .pd-product {
+            
+            display: flex;
+            justify-content: space-evenly;
+            padding: 5px;
+            background-color: aliceblue;
+            
+            div {
+                width: 70px;
+            }
+            .pd-sl {
+                width: 30px;
+            }
+        }
+    }
+    .pd-total {
+        background-color: lightblue;
+        opacity: 0.8;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px ;
+        color: red;
+        font-size: 17px;
+        div {
+            width: 70px;
+        }
+        .pd-tc {
+            width: 80px;
+        }
+        .pd-sl {
+            width: 30px;
+        }
+    }
+}

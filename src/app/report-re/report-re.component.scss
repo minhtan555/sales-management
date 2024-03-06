@@ -1,0 +1,122 @@
+body {
+    max-width: 360px;
+    height: 580px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.container {
+    max-width: 360px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    header {
+        font-size: 20px;
+        margin: 10px;
+        display: flex;
+        font-weight: bold;
+        div {
+            margin: 0 auto;
+        }
+    }
+    
+    .total-profit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid black;
+        padding: 10px 5px;
+        margin: 0 auto;
+        border-radius: 5px;
+        font-size: 18px;
+        width: 50%;
+        strong {
+            color: red;
+        }
+        .tf-title {
+            display: flex;
+            gap: 10px;
+        }
+    }
+    .detail-profit  {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 10px;
+        margin: 10px;
+        border: 1px solid black;
+        strong {
+            color: red;
+        }
+        i {
+            font-weight: bold;
+        }
+        .dp-title {
+            display: flex;
+            font-weight: bold;
+            gap: 10px;
+            .dpt-profit {
+                flex-grow: 2;
+            }
+        }
+        .dp-detail {
+            background-color: lightblue;
+            padding: 10px;
+            div {
+                display: flex;
+                justify-content: space-between;
+                margin-right: 5px;
+            }
+            .dpd-center {
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 3px;
+                margin: 0 auto;
+                button {
+                    border: 0;
+                }
+            }
+        }
+        .dp-capital-price {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 20px;
+        }
+        .dp-expense {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            
+            .dpe-1 {
+                flex-grow: 2;
+                
+            }
+            
+        }
+        .dpa-button {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 3px;
+            margin: 0 auto;
+            width: 45%;
+            text-align: center;
+            button {
+                border: 0;
+            }
+        }
+    }
+    .sales-profit-expenses {
+        display: flex;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px 10px;
+        gap: 10px;
+        width: 70%;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+    
+}

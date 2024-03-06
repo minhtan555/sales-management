@@ -1,0 +1,92 @@
+body {
+    max-width: 360px;
+    height: 580px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.container {
+    max-width: 360px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    header {
+        margin: 10px;
+        font-size: 16px;
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        .title {
+            flex-grow: 2;
+            font-weight: bold;
+        }
+    } 
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        font-weight: bold;
+    }
+    .order-customer {
+
+        font-weight: bold;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        .one-order {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            .name {
+                display: flex;
+                justify-content: space-between;
+               
+                #processing {
+                    color: red;          
+                    background-color: cyan;
+                    padding: 5px;
+                    border-radius: 20px;
+                    margin-top: -3px;
+                }
+            }
+            .totalprice {
+                display: flex;
+                justify-content: space-between;
+                #money {
+                    color: red;
+                    font-size: 17px;
+                }
+            }
+            .process {
+                margin: 10px 0;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .confirm {
+                display: flex;
+                justify-content: space-evenly;
+                button {
+                    padding: 0 20px;
+                    border-radius: 5px;
+                }
+                #greenB {
+                    background-color: #66FF99;
+                }
+            }
+        }
+    }
+    .button-create-order {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 5px 5px 0;
+        button {
+            font-size: 17px;
+            border-radius: 10px;
+            background-color: lightblue;
+            
+        }
+    }
+   
+}

@@ -1,10 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-
-
+import { ProductListComponent } from '../products/components/product-list/product-list.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-warehouse',
   templateUrl: './warehouse.component.html',
+  standalone: true,
+  imports: [CommonModule, ProductListComponent,RouterModule],
   styleUrls: ['./warehouse.component.scss']
 })
 export class WarehouseComponent {

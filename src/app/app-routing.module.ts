@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { WarehouseComponent } from './components/warehouse/warehouse.component';
-import { OrderComponent } from './components/order/order.component';
-import { CreateOrderComponent } from './components/create-order/create-order.component';
-import { ConfirmOrderComponent } from './components/confirm-order/confirm-order.component';
-import { RevenueAndExpenditureComponent } from './components/revenue-and-expenditure/revenue-and-expenditure.component';
+import { HomeComponent } from './features/home-page/components/home/home.component';
+import { CreateOrderComponent } from './features/create-order/create-order.component';
+import { RevenueAndExpenditureComponent } from './features/revenue-and-expenditure/revenue-and-expenditure.component';
 import { ReportReComponent } from './components/report-re/report-re.component';
-import { SalesProfitComponent } from './components/sales-profit/sales-profit.component';
+import { SalesProfitComponent } from './features/sales-profit/sales-profit.component';
 
-const routes: Routes = [
+
+export const routes: Routes = [
   {
     path: "home",
     component: HomeComponent,
@@ -17,13 +15,13 @@ const routes: Routes = [
   },
   {
     path: "warehouse",
-    component: WarehouseComponent,
-    title: "Sale Management - Warehouse"
+    title: "Sale Management - Warehouse",
+    loadComponent: () => import('./features/warehouse/warehouse.component').then(m => m.WarehouseComponent)
   },
   {
     path: "order",
-    component: OrderComponent,
-    title: "Sale Management - Order"
+    title: "Sale Management - Order",
+    loadComponent: () => import('./features/order/order.component').then(m => m.OrderComponent)
   },
   {
     path: "create-order",
@@ -44,13 +42,13 @@ const routes: Routes = [
   {
     path: "",
     redirectTo: "/home", 
-    pathMatch: "prefix",
+    pathMatch: "full",
     
   },
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+// @NgModule({
+//   imports: [RouterModule.forRoot(routes)],
+//   exports: [RouterModule]
+// })
+// export class AppRoutingModule { }

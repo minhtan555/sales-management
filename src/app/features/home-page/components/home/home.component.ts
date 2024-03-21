@@ -1,9 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { MenuFooterComponent } from 'src/app/shared/footer/components/menu-footer/menu-footer.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  standalone: true,
+  imports: [CommonModule,MenuFooterComponent,RouterModule],
   styleUrls: ['./home.component.scss']
   
 })
